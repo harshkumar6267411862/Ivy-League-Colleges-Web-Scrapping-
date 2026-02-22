@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Community Posts</h2>
+
+<form method="POST" class="mb-4">
+<textarea name="content" class="form-control mb-2" placeholder="Share your achievement..." required></textarea>
+<button class="btn btn-success">Post</button>
+</form>
+
+{% for post in posts %}
+<div class="card mb-3">
+<div class="card-body">
+{{ post.content }}
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}
